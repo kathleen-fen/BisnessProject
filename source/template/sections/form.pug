@@ -1,19 +1,22 @@
 section.form-section
     .conteiner
+        //-+title('Get Your Free Facebook Analysits Now','Enter your details below')
         .title
             h2.title.title__header Get Your Free Facebook Analysits Now 
             .title__text Enter your details below
 
-        .btn-down: a.arrow-down: i.fa.fa-angle-down
+        //- .btn-down: a.arrow-down(href="javascript:void(0)"): i.fa.fa-angle-down
+        .btn-down: a.arrow-down(href="form.html" target="_blank"): i.fa.fa-angle-down
 
-        .form-container
+        .form-container.is-hidden
             form(action="#", method="post").form
                 button(type="button").form__close-button X
                 .form__text.
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum quae veniam quidem debitis cumque sint unde quibusdam modi laborum
                     quo dolor animi porro 
                 .form__fields
-                    input.form__input(type="text" placeholder="Your Name")  
-                    input.form__input(type="text" placeholder="Contact Number")   
-                    input.form__input(type="text" placeholder="Contact Name")   
+                    input.form__input(type="text" placeholder="Your Name"  data-valid = 'required')
+                    input.form__input(type="text" placeholder="Your Email" data-valid = 'required' data-email)     
+                    input.form__input(type="text" placeholder="Contact Number" data-valid = 'required' data-number)   
+                    
                 button(type="submit").button.button--text-uppercase.button--red Submit now      

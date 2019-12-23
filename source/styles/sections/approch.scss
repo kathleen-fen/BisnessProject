@@ -2,6 +2,17 @@
     padding: 86px 0 94px;
     background-color: #f3f3f3;
 
+    .title {
+        @media (max-width: 985px) {
+            margin-bottom: 35px;
+        }
+    }
+
+    @media (max-width: 985px) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
     &__list {
         margin: 0;
         padding: 0;
@@ -14,20 +25,38 @@
         box-shadow: -1px -1px 10px 1px rgba(214,214,214,1);
         color: #424242;
         background-color: #fff;
+
+        @media (max-width: 700px) {
+            padding: 20px 20px;
+        }
+
         &:nth-child(2n) {
             display: flex;
             flex-direction: row-reverse;
             text-align: right;
+            @media (max-width: 700px) {
+                display: block;
+               
+            }
 
+            
 
             .approch__text{
                 padding: 70px 90px;
+                @media(max-width: 985px) {
+                    padding: 25px 20px;
+    
+                }
+
+                
             }
 
             .approch__step {
                 right: auto;
                 left: -52px;
             }
+
+            
         }
     }
 
@@ -37,6 +66,16 @@
             max-height: 236px;
             display: inline-block;
             vertical-align: top;
+
+            @media  (max-width: 985px)  {
+                max-width: calc(340px/1.5);
+                max-height: calc(236px/1.5);
+            }
+
+            @media (max-width: 700px) {
+                display: block;
+                margin: auto;
+            }
 
 
         }
@@ -53,6 +92,18 @@
             width: 64%;
             font-size: 0.875rem;
             padding: 70px 70px 55px 90px;
+
+            @media(max-width: 985px) {
+                padding: 25px 20px;
+
+            }
+            @media (max-width: 700px) {
+                width: 100%;
+                text-align: center;
+            }
+
+
+           
         }
 
         &__step{
@@ -69,6 +120,10 @@
             font-size: 1.25rem;
             background-color: #de2b24;
             color: #fff;
+
+            @media (max-width:985px) {
+                display: none;
+            }
 
             &::before {
                 content: counter(count);
